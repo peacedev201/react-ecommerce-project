@@ -11,7 +11,20 @@
     padding-left:20px;
     padding-right:20px;
 }
-
+.btn-user-register{
+    color:#ffffff;
+    font-style: italic;
+    background-color: #1c75bc!important;
+    border-width: 0px;
+}
+@media (max-width:860px){
+    .btn-user-register{
+        font-size:14px;
+    }
+}
+button:focus{
+    outline: 0px!important;
+}
 .text-center{
     text-align: center;
 }

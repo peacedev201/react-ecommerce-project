@@ -1,18 +1,22 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import navLinks from '../../NavLinks.js';
-
 import logo from '../../assets/images/image/Logo-Header.png';
+import { showModal } from '../../modal/modalConductorActions';
+
 import { Row, Col, Container } from 'reactstrap';
 // import Loader from 'react-loader-spinner';
 import {
-    Modal, ModalHeader, ModalBody, Nav, NavItem, NavLink, TabContent, TabPane, Navbar, NavbarToggler, Collapse,
+    Nav, NavItem, NavLink, Navbar, NavbarToggler, Collapse,
     UncontrolledDropdown, DropdownMenu, DropdownItem
 } from 'reactstrap';
 
-import classnames from 'classnames';
 import './header.css';
 import '../../assets/css/flaticon.css';
+
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -32,6 +36,16 @@ class Header extends React.Component {
         this.toggle = this.toggle.bind(this);
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.ShowCart = this.ShowCart.bind(this);
+        this.onSignUp = this.onSignUp.bind(this);
+        this.onLogin = this.onLogin.bind(this);
+    }
+    onSignUp(siginUp, e) {
+        e.stopPropagation();
+        this.props.modalActions.showModal('SIGNUP_MODAL', siginUp);
+    }
+    onLogin(login, e){
+        e.stopPropagation();
+        this.props.modalActions.showModal('LOGIN_MODAL',login);
     }
     toggle() {
         this.setState({
@@ -47,22 +61,6 @@ class Header extends React.Component {
         this.setState({
             collapsed: !this.state.collapsed
         });
-    }
-
-    logintoggle(tab) {
-        if (this.state.activeTab !== tab) {
-            this.setState({
-                activeTab: tab
-            });
-            var modal_tag = document.getElementById("div-modal").getAttribute("class");
-            if (modal_tag === "div-modal") {
-                document.getElementById("div-modal").setAttribute("class", "div-modal-signup");
-            }
-            else {
-                document.getElementById("div-modal").setAttribute("class", "div-modal");
-            }
-
-        }
     }
 
     ReadCartItems() {
@@ -195,10 +193,15 @@ class Header extends React.Component {
                                                     <div className="menu-top-bar-menu-container">
                                                         <ul className="top-menu  nav">
                                                             <li className="menu-item font-italic">
-                                                                <Link to="#" className="btn-user-join" onClick={this.toggle} data-toggle="modal" data-target="#"> Login</Link>
+                                                            <button className="btn-user-register" onClick={
+                                                                    () => {
+                                                                        console.log("login btn clicked", this.props)
+                                                                         this.props.modalActions.showModal('LOGIN_MODAL');
+                                                                          }}>Login</button>
                                                             </li>&nbsp;|&nbsp;
                                                             <li className="menu-item font-italic">
-                                                                <Link to="#" className="btn-user-join" onClick={this.toggle} data-toggle="modal" data-target="#">Register</Link>
+                                                                <button  className="btn-user-register" onClick={
+                                                                    () => {  this.props.modalActions.showModal('SIGNUP_MODAL'); }}>Register</button>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -294,98 +297,7 @@ class Header extends React.Component {
                                     </div>
                                 </Col>
                             </Row>
-
-                            <Row>
-                                <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-login modal-dialog-centered">
-                                    <div class="div-modal" id="div-modal">
-                                        <ModalBody>
-                                            <TabContent activeTab={this.state.activeTab}>
-                                                <TabPane tabId="1">
-                                                    <div className="modal-header-login text-center">
-                                                        <h1 class="modal-login-txt">LOGIN</h1>
-                                                        <p class="modal-login-txt-content font-italic">Get access to your Orders,<br />Wishlist and Recommendations</p>
-                                                    </div>
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <input type="text" class=" form-input font-italic text-center" placeholder="Email/Phone Number"></input>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-input font-italic text-center" placeholder="Password"></input>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="form-link-tag text-center">
-                                                                <Link className="btn btn-sign" >LOGIN</Link>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                    <div class="modal-footer-link text-center">
-                                                        <p class="new-account font-italic">New to Qapkart?</p>
-                                                        <Link to="#"
-                                                            onClick={() => { this.logintoggle('2'); }} class="btn-signup font-italic"> SIGNUP </Link>
-                                                    </div>
-                                                </TabPane>
-                                                <TabPane tabId="2">
-                                                    <div className="modal-header-login text-center">
-                                                        <h1 class="modal-login-txt">SIGNUP</h1>
-                                                        <p class="modal-login-txt-content font-italic">WITH QAPKART</p>
-                                                        <div className="social-account">
-                                                            <div class="row">
-                                                                <div class="col-4">
-                                                                    <p class="social-txt-sigin font-italic">Using:</p>
-                                                                </div>
-                                                                <div class="col-4">
-                                                                    <Link to="#">
-                                                                        <img src={require(`../../assets/images/image/Google+.png`)}></img>
-                                                                    </Link>
-                                                                </div>
-                                                                <div class="col-4">
-                                                                    <Link to="#">
-                                                                        <img src={require(`../../assets/images/image/FB.png`)}></img>
-                                                                    </Link>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="classical-txt-sigin text-center font-italic">or Be Classical</p>
-                                                    </div>
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <input type="text" class=" form-input font-italic text-center" placeholder="Full Name"></input>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class=" form-input font-italic text-center" placeholder="Mobile Number"></input>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class=" form-input font-italic text-center" placeholder="Enter OTP"></input>
-                                                        </div>
-                                                        <div class="form-resend text-right">
-                                                            <Link className="resend-link" >RECEND OTP</Link>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class=" form-input font-italic text-center" placeholder="Set Password"></input>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class=" form-input font-italic text-center" placeholder="Confirm Password"></input>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="form-link-tag text-center">
-                                                                <Link className="btn btn-sign" >SIGNUP</Link>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer-link text-center">
-                                                            <p class="new-account font-italic">Already Member?</p>
-                                                            <Link to="#"
-                                                                onClick={() => { this.logintoggle('1'); }} class="btn-signup font-italic"> LOGIN </Link>
-                                                        </div>                                                        
-                                                    </form>
-                                                </TabPane>
-                                            </TabContent>
-                                        </ModalBody>
-                                    </div>
-                                </Modal>
-                                <div className="col-12">
-                                    <div className="mobile-menu" id="mobileMenu" />
-                                </div>
-                            </Row>
+                            
                         </div>
                     </div>
                     <div className="header-main header-main-bg-color-default">
@@ -410,8 +322,8 @@ class Header extends React.Component {
                                                                 <div className="primary-nav">
                                                                     <div className="primary-nav-wrapper">
                                                                         <nav className="mega-menu">
-                                                                            <div class="menu-list-items">
-                                                                                <Navbar light expand="md" class="front_menu" >
+                                                                            <div className="menu-list-items">
+                                                                                <Navbar light expand="md" className="front_menu" >
                                                                                     <NavbarToggler onClick={this.toggle} />
                                                                                     <Collapse isOpen={this.state.isOpen} navbar>
                                                                                         {navLinks.map((navLink, index) => (
@@ -581,4 +493,12 @@ class Header extends React.Component {
     }
 };
 
-export default Header;
+// export default Header;
+// Header = withRouter(Header);
+
+export default connect(
+    null,
+    dispatch => ({      
+      modalActions: bindActionCreators({ showModal }, dispatch)
+    })
+  )(Header);

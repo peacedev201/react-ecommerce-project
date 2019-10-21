@@ -8,7 +8,7 @@ import HomePage from './component/home/home';
 
 import { IntlProvider } from 'react-intl';
 import ComingSoon from './component/Pages/ComingSoon';
-
+import Modalconductor from './modal/ModalConductor';
 import './App.css';
 import './Vendor.js';
 
@@ -21,8 +21,7 @@ class App extends Component {
   }
 
   render() {
-    const { location } = this.props;
-    console.log(this.props);
+    const { location } = this.props;    
     return (
       <IntlProvider locale="en" messages="s">
         <Fragment>
@@ -34,11 +33,12 @@ class App extends Component {
               </Switch>
               :
               <div>
+                <Modalconductor/>
                 <Header />
                  <Switch>
                   <Route exact path="/" component={HomePage} />
-                </Switch> 
-                <Footer />
+                </Switch>  */}
+                 <Footer />
               </div>
           }
 

@@ -148,23 +148,23 @@ class HomePage extends React.Component {
                 <div className="landing-home-nav">
                     <Row>
                         <Col lg={4}>
-                            <div class="nav-right">
+                            <div className="nav-right">
                                 <img className="nav-imgae-1" src={require(`../../assets/images/image/Gadgets-01.png`)} />
                             </div>
                         </Col>
                         <Col lg={8}>
-                            <div class="m-portlet m-portlet--mobile">
-                                <div class="m-portlet__head">
-                                    <div class="row">
-                                        <div class="col-6 text-left">
-                                            <h1 class="nav-h1">FICTION</h1>
+                            <div className="m-portlet m-portlet--mobile">
+                                <div className="m-portlet__head">
+                                    <div className="row">
+                                        <div className="col-6 text-left">
+                                            <h1 className="nav-h1">FICTION</h1>
                                         </div>
-                                        <div class="col-6 text-right font-italic">
-                                            <h3 class="nav-h3">Explore</h3>
+                                        <div className="col-6 text-right font-italic">
+                                            <h3 className="nav-h3">Explore</h3>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="m-portlet__body">
+                                <div className="m-portlet__body">
                                     <Row>
                                         <ProductSlider settings={saleslider} />
                                     </Row>
@@ -173,48 +173,48 @@ class HomePage extends React.Component {
                         </Col>
                     </Row>
                 </div>
-                <div class="middle-link-slider">
-                    <div class="middle-slider-nav">
-                        <div class="middle-slider-left">
-                            <div class="middle-slider-text">
-                                <h1 class="middle-slider-text-header">NEW ARRIVAL</h1>
-                                <div class="nav">
-                                    <ul class="nav nav-link-ul d-flex d-inline-flex">
-                                        <li class="nav-item d-inline-flex  align-items-center mr-2">
+                <div className="middle-link-slider">
+                    <div className="middle-slider-nav">
+                        <div className="middle-slider-left">
+                            <div className="middle-slider-text">
+                                <h1 className="middle-slider-text-header">NEW ARRIVAL</h1>
+                                <div className="nav">
+                                    <ul className="nav nav-link-ul d-flex d-inline-flex">
+                                        <li className="nav-item d-inline-flex  align-items-center mr-2">
                                             <Link to="/Men" className="Men-link font-italic" rel="nofollow">Men</Link>
                                         </li> |
-                                            <li class="nav-item d-inline-flex  align-items-center mr-2">
+                                            <li className="nav-item d-inline-flex  align-items-center mr-2">
                                             <Link to="/Women" className="Men-link font-italic" rel="nofollow">&nbsp; Women</Link>
                                         </li> |
-                                            <li class="nav-item d-inline-flex  align-items-center mr-2">
+                                            <li className="nav-item d-inline-flex  align-items-center mr-2">
                                             <Link to="/Electronics" className="Men-link font-italic" rel="nofollow"> &nbsp;Electronics</Link>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="nav">
-                                    <ul class="nav nav-link-ul d-flex d-inline-flex">
-                                        <li class="nav-item d-inline-flex  align-items-center mr-2">
+                                <div className="nav">
+                                    <ul className="nav nav-link-ul d-flex d-inline-flex">
+                                        <li className="nav-item d-inline-flex  align-items-center mr-2">
                                             <Link to="/book" className="Men-link font-italic" rel="nofollow">Books</Link>
                                         </li> |
-                                            <li class="nav-item d-inline-flex  align-items-center mr-2">
+                                            <li className="nav-item d-inline-flex  align-items-center mr-2">
                                             <Link to="/furniture" className="Men-link font-italic" rel="nofollow">&nbsp; Furniture</Link>
                                         </li>
                                     </ul>
                                 </div>
-                                <p class="middle-slider-detail font-italic">
+                                <p className="middle-slider-detail font-italic">
                                     Visit the shop page to checkout<br />
                                     the new arrivals of this week.
                                     </p>
-                                <div class="see-detail-bound">
-                                    <hr class="bound-hr" />
+                                <div className="see-detail-bound">
+                                    <hr className="bound-hr" />
                                 </div>
-                                <div class="detail-see">
-                                    <Link to="/more-see" class="btn-more-see">SEE ALL</Link>
+                                <div className="detail-see">
+                                    <Link to="/more-see" className="btn-more-see">SEE ALL</Link>
                                 </div>
                             </div>
                         </div>
-                        <div class="furniter-slider-div text-right">
-                            <div class="funiter-slider-content">
+                        <div className="furniter-slider-div text-right">
+                            <div className="funiter-slider-content">
                                 <Row>
                                     <FurnitureSlider settings={furnitureSlider} />
                                 </Row>
@@ -225,18 +225,18 @@ class HomePage extends React.Component {
                 <div className="landing-home-nav">
                     <Row>
                         <Col lg={8}>
-                            <div class="m-portlet m-portlet--mobile">
-                                <div class="m-portlet__head">
-                                    <div class="row">
-                                        <div class="col-6 text-left">
-                                            <h1 class="nav-h1">ACADEMIC</h1>
+                            <div className="m-portlet m-portlet--mobile">
+                                <div className="m-portlet__head">
+                                    <div className="row">
+                                        <div className="col-6 text-left">
+                                            <h1 className="nav-h1">ACADEMIC</h1>
                                         </div>
-                                        <div class="col-6 text-right font-italic">
-                                            <h3 class="nav-h3">Explore</h3>
+                                        <div className="col-6 text-right font-italic">
+                                            <h3 className="nav-h3">Explore</h3>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="m-portlet__body">
+                                <div className="m-portlet__body">
                                     <Row>
                                         <ProductSlider settings={saleslider} />
                                     </Row>
@@ -244,57 +244,57 @@ class HomePage extends React.Component {
                             </div>
                         </Col>
                         <Col lg={4}>
-                            <div class="nav-right">
+                            <div className="nav-right">
                                 <img className="nav-imgae-1" src={require(`../../assets/images/image/Discount-01.png`)} />
                             </div>
                         </Col>
                     </Row>
                 </div>
-                <div class="main-content-img">
+                <div className="main-content-img">
                     <Row>
                         <Col lg={6}>
-                            <div class="main-content-left">
-                                <div class="main-offer-imag">
-                                    <img class="offer-image" src={require(`../../assets/images/image/Offers-01.png`)}></img>
+                            <div className="main-content-left">
+                                <div className="main-offer-imag">
+                                    <img className="offer-image" src={require(`../../assets/images/image/Offers-01.png`)}></img>
                                 </div>
-                                <div class="content-text">
-                                    <h1 class="content-header">BEST</h1>
-                                    <h1 class="content-header">OFFERS</h1>
-                                    <div class="detail-see-offer">
-                                        <Link to="/more-see-offer" class="btn-more-see-offer">SEE ALL</Link>
+                                <div className="content-text">
+                                    <h1 className="content-header">BEST</h1>
+                                    <h1 className="content-header">OFFERS</h1>
+                                    <div className="detail-see-offer">
+                                        <Link to="/more-see-offer" className="btn-more-see-offer">SEE ALL</Link>
                                     </div>
                                 </div>
                             </div>
                         </Col>
                         <Col lg={6}>
-                            <div class="main-content-left">
-                                <div class="main-offer-imag">
-                                    <img class="offer-image" src={require(`../../assets/images/image/Now-01.png`)}></img>
+                            <div className="main-content-left">
+                                <div className="main-offer-imag">
+                                    <img className="offer-image" src={require(`../../assets/images/image/Now-01.png`)}></img>
                                 </div>
-                                <div class="content-text">
-                                    <h1 class="content-header">START</h1>
-                                    <h1 class="content-header">NOW</h1>
-                                    <div class="detail-see-offer">
-                                        <Link to="/more-see-start" class="btn-more-see-offer">SEE ALL</Link>
+                                <div className="content-text">
+                                    <h1 className="content-header">START</h1>
+                                    <h1 className="content-header">NOW</h1>
+                                    <div className="detail-see-offer">
+                                        <Link to="/more-see-start" className="btn-more-see-offer">SEE ALL</Link>
                                     </div>
                                 </div>
                             </div>
                         </Col>
                     </Row>
                 </div>
-                <div class="main-content-img">
-                    <div class="m-portlet m-portlet--mobile">
-                        <div class="m-portlet__head">
-                            <div class="row">
-                                <div class="col-8 text-left">
-                                    <h1 class="nav-footer-h1">CHILDREN’S COLLECTION</h1>
+                <div className="main-content-img">
+                    <div className="m-portlet m-portlet--mobile">
+                        <div className="m-portlet__head">
+                            <div className="row">
+                                <div className="col-8 text-left">
+                                    <h1 className="nav-footer-h1">CHILDREN’S COLLECTION</h1>
                                 </div>
-                                <div class="col-4 text-right font-italic">
-                                    <h3 class="nav-h3">Explore</h3>
+                                <div className="col-4 text-right font-italic">
+                                    <h3 className="nav-h3">Explore</h3>
                                 </div>
                             </div>
                         </div>
-                        <div class="m-portlet__body">
+                        <div className="m-portlet__body">
                             <Row>
                                 <ProductSlider settings={footerSlider} />
                             </Row>

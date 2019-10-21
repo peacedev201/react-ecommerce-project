@@ -13,12 +13,15 @@
     "react-loader-spinner": "^3.1.4",
     "react-notifications-component": "^2.1.0",
     "react-rangeslider": "^2.2.0",
+    "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
     "react-slick": "^0.25.2",
     "react-table": "^6.10.3",
     "react-toastify": "^5.4.0",
     "reactstrap": "^8.0.1",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {

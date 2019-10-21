@@ -149,7 +149,7 @@ class Footer extends React.Component {
                         <div className="site-info">
                             <div className="footer-widget">
                                 <div className="text-center">
-                                    <p class="footer-txt font-italic"> <Link to="#" className="footer-link">Qapkart.com</Link>, {(new Date().getFullYear())} All Rights Reserved.</p>
+                                    <p className="footer-txt font-italic"> <Link to="#" className="footer-link">Qapkart.com</Link>, {(new Date().getFullYear())} All Rights Reserved.</p>
                                 </div>
                                 <div className="clearfix" />
                             </div>
@@ -159,8 +159,8 @@ class Footer extends React.Component {
 
                 {/* Back to Top */}
                 <div id="back-to-top" style={backtotop} onClick={this.ClicktoTop}>
-                    <Link class="top arrow">
-                        <i class="fa fa-angle-up"></i>
+                    <Link className="top arrow">
+                        <i className="fa fa-angle-up"></i>
                     </Link>
                 </div>
             </div>

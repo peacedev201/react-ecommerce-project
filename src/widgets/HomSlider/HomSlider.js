@@ -26,24 +26,24 @@ class HomSlider extends Component {
                             <img src={require(`../../assets/images/image/Banner-1.png`)} alt="slide-1" />
                         </div>
                         <div className="slide-content">
-                            <div class="slider-text">
-                                <div class="row">
-                                    <div class="col-xl-6 col-md-8">
-                                        <div class="slide-left">
-                                            <div class="slide-title">
-                                                <div class="row">
-                                                    <div class="col-2 nav-logo">
+                            <div className="slider-text">
+                                <div className="row">
+                                    <div className="col-xl-6 col-md-8">
+                                        <div className="slide-left">
+                                            <div className="slide-title">
+                                                <div className="row">
+                                                    <div className="col-2 nav-logo">
                                                         <img src={require(`../../assets/images/image/nav-logo.png`)} />
                                                     </div>
                                                 </div>
-                                                <h1 class="slider-header-txt">THE NEXT</h1>
-                                                <h1 class="slider-header-txt">BEST THING</h1>
-                                                <h2 class="slider-subtxt"><b class="slider-sub-txt-1">SALE START FROM</b><b class="slider-sub-txt-2"> TOMORROW</b></h2>
+                                                <h1 className="slider-header-txt">THE NEXT</h1>
+                                                <h1 className="slider-header-txt">BEST THING</h1>
+                                                <h2 className="slider-subtxt"><b className="slider-sub-txt-1">SALE START FROM</b><b className="slider-sub-txt-2"> TOMORROW</b></h2>
                                             </div>
-                                            <Link class="btn slider-button" to="/shop">ADD TO WISHLIST</Link>
+                                            <Link className="btn slider-button" to="/shop">ADD TO WISHLIST</Link>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-md-4 text-right d-none d-md-block">
+                                    <div className="col-xl-6 col-md-4 text-right d-none d-md-block">
 
                                     </div>
                                 </div>
@@ -58,24 +58,24 @@ class HomSlider extends Component {
                             <img src={require(`../../assets/images/image/Banner-1.png`)} alt="slide-1" />
                         </div>
                         <div className="slide-content">
-                            <div class="slider-text">
-                                <div class="row">
-                                    <div class="col-xl-6 col-md-8">
-                                        <div class="slide-left">
-                                            <div class="slide-title">
-                                                <div class="row">
-                                                    <div class="col-2 nav-logo">
+                            <div className="slider-text">
+                                <div className="row">
+                                    <div className="col-xl-6 col-md-8">
+                                        <div className="slide-left">
+                                            <div className="slide-title">
+                                                <div className="row">
+                                                    <div className="col-2 nav-logo">
                                                         <img src={require(`../../assets/images/image/nav-logo.png`)} />
                                                     </div>
                                                 </div>
-                                                <h1 class="slider-header-txt">THE NEXT</h1>
-                                                <h1 class="slider-header-txt">BEST THING</h1>
-                                                <h2 class="slider-subtxt"><b class="slider-sub-txt-1">SALE START FROM</b><b class="slider-sub-txt-2"> TOMORROW</b></h2>
+                                                <h1 className="slider-header-txt">THE NEXT</h1>
+                                                <h1 className="slider-header-txt">BEST THING</h1>
+                                                <h2 className="slider-subtxt"><b className="slider-sub-txt-1">SALE START FROM</b><b className="slider-sub-txt-2"> TOMORROW</b></h2>
                                             </div>
-                                            <Link class="btn slider-button" to="/shop">ADD TO WISHLIST</Link>
+                                            <Link className="btn slider-button" to="/shop">ADD TO WISHLIST</Link>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-md-4 text-right d-none d-md-block">
+                                    <div className="col-xl-6 col-md-4 text-right d-none d-md-block">
 
                                     </div>
                                 </div>
